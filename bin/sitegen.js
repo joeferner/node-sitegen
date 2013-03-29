@@ -6,6 +6,14 @@ var sitegen = require('../lib/');
 
 var argv = optimist
   .usage('Usage: sitegen.js [options]')
+  .options('indir', {
+    default: '.',
+    describe: 'The input directory.'
+  })
+  .options('outdir', {
+    default: '_build/',
+    describe: 'The output directory.'
+  })
   .alias('help', 'h')
   .alias('h', '?')
   .argv;
